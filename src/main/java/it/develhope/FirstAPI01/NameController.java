@@ -12,8 +12,7 @@ public class NameController {
     @GetMapping
     public String getName(){
         return "Emilio";
-    }
-
+      
     @PostMapping
     public StringBuilder postRequest(){
         StringBuilder sb = new StringBuilder(getName());
@@ -21,7 +20,3 @@ public class NameController {
         return strReverse;
     }
 }
-
-
-
-
