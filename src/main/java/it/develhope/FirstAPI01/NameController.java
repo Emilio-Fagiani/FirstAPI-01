@@ -6,17 +6,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping ( value = "/name")
+@RequestMapping
 public class NameController {
 
-    @GetMapping
-    public String getName(){
+    public String getRequest(){
         return "Emilio";
     }
 
-    @PostMapping
+
+    @GetMapping(value = "/get")
+    public String name(){
+       return getRequest();
+    }
+
+    @PostMapping (value = "/post")
     public StringBuilder postRequest(){
-        StringBuilder sb = new StringBuilder(getName());
+        StringBuilder sb = new StringBuilder(getRequest());
         StringBuilder strReverse = sb.reverse();
         return strReverse;
     }
