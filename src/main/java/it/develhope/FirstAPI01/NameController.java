@@ -9,14 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping
 public class NameController {
 
-    public String getRequest(){
-        return "Emilio";
-    }
-
 
     @GetMapping(value = "/get")
-    public String name(){
-       return getRequest();
+    public String getRequest(){
+       return "Emilio";
     }
 
     @PostMapping (value = "/post")
